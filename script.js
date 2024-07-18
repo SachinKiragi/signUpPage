@@ -151,6 +151,7 @@ ageEl.addEventListener('keyup', (e) => {
 });
 
 
+//Function to return strength of a password using REGEX
 function getStrengthOfPasword(password){
     let weak = /[\@\.\_\$\#\!]|[a-zA-Z0-9]/g
     let normal = /[a-zA-Z0-9]*[\@\.\_\$\#\%!]+[a-zA-Z0-9]+/g;
@@ -172,6 +173,7 @@ function getStrengthOfPasword(password){
 
 }
 
+//Function to dislay strength of a password at run time
 passwordEl.addEventListener('keyup', (e) => {
     e.preventDefault();
     let password = e.target.value;
