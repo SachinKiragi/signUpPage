@@ -7,7 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- container-parent -->
+    <div class="container">
+        <h2 id="title">Log-in Page</h2>
+        <form action="" id="login-form">
+            <!-- Div containing username -->
+            <div id="username-div" class="input-div">
+                <label for="username" class="input-label">Username</label>
+                <input type="text" name="username" id="username" class="input">
+            </div>
 
+            <!-- Div containing email of th euser -->
+            <div id="email-div" class="input-div">
+                <label for="email" class="input-label">E-mail</label>
+                <input type="text" id="email" name="email" class="input">
+            </div>
+
+            <!-- Div containing gender of the user -->
+            <div id="email-div" class="input-div">
+                <label for="gender" class="input-label">Gender</label>
+                <!-- For male -->
+                <label for="male-radio">Male</label>
+                <input type="radio" name="gender" id="male-radio" class="gender">
+                <!-- For female -->
+                <label for="female-radio">Female</label>
+                <input type="radio" name="gender" id="female-radio" class="gender">
+                <!-- For other -->
+                <label for="other-radio">Other</label>
+                <input type="radio" name="gender" id="other-radio" class="gender">
+            </div>
+
+            <!-- Div for age -->
+            <div id="age-div" class="input-div">
+                <label for="age" class="input-label">Age</label>
+                <input type="number" name="username" id="username" class="input">
+            </div>
+
+            <!-- Div for password -->
+            <div id="password-div" class="input-div">
+                <label for="password" class="input-label">Password</label>
+                <input type="password" name="username" id="username" class="input">
+            </div>
+
+            <!-- Submit button -->
+             <button id="submit-btn" class="btn">Submit</button>
+        </form>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
