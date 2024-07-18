@@ -8,6 +8,11 @@ const passwordEl = document.querySelector('#password');
 const submitBtnEl =  document.querySelector('#submit-btn');
 const iconBtnEl = document.querySelector('#icon-btn');
 
+const phoneValidityEl = document.querySelector('#phone-validity');
+const emailValidityEl = document.querySelector('#email-validity');
+const ageValidity = document.querySelector('#age-validity');
+const passwordStrengthEl = document.querySelector('#password-strength');
+
 // Temprory object to store instance of an user
 let user = {
     userName: null,
@@ -46,6 +51,35 @@ function isFormValid(){
     }
 }
 
+//Function to validate phone number at run time
+phoneEl.addEventListener('keyup', (e) => {
+    console.log(phoneEl.value.length);
+    let size = phoneEl.value.length;
+    if(size==0){
+        phoneValidityEl.innerText = "";
+    } else if(size==10){
+        phoneValidityEl.style.color = "green";
+        phoneValidityEl.innerText = "Valid";
+        console.log(phoneValidityEl);
+   } else{  
+        phoneValidityEl.style.color = "red";
+        phoneValidityEl.innerText = "Invalid";
+        console.log(phoneValidityEl);
+   }
+});
+
+
+//Function validate a particular email
+function isMailIdValid(emailValue){
+
+}
+
+//Function to validat email at runtime
+emailEl.addEventListener('keyup', (e) => {
+    let emailValue = emailEl.value;
+    console.log(emailValue);
+});
+
 
 //Function to get user data
 function getUserData(){
@@ -82,7 +116,7 @@ submitBtnEl.addEventListener('click', (e) => {
     getUserData();
 });
 
-
+//Function change icon for password hide/show
 iconBtnEl.addEventListener('click', (e)=>{
     e.preventDefault();
     if(e.target.src == "http://127.0.0.1:5500/loginPage/images/eye-slash-solid.svg"){
@@ -97,5 +131,4 @@ iconBtnEl.addEventListener('click', (e)=>{
         
     }
 });
-
 

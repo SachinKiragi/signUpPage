@@ -161,3 +161,18 @@ form{
     height: 1rem;
     cursor: pointer;
 }
+
+
+.validity{
+    position: absolute;
+    right: 0;
+    margin-bottom: -2.4rem;
+    margin-right: 0.7rem;
+    font-family: Merriweather;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgb(255, 2, 2);
+    z-index: 1;
+    background-color: white;
+    letter-spacing: 0.05rem;
+}

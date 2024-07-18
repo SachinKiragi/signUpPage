@@ -23,12 +23,14 @@
             <div id="phone-div" class="input-div">
                 <label for="phone" class="input-label">Phone</label>
                 <input type="number" name="phone" id="phone" class="input" placeholder="Enter you phone no.">
+                <span class="validity" id="phone-validity"></span>
             </div>
 
             <!-- Div containing email of th euser -->
             <div id="email-div" class="input-div">
                 <label for="email" class="input-label">E-mail</label>
                 <input type="email" id="email" name="email" class="input" placeholder="Enter you email (eg: xyz@gmail.com)">
+                <span class="validity" id="email-validity">Invalid</span>
             </div>
 
             <!-- Div containing gender of the user -->
@@ -51,6 +53,7 @@
             <div id="age-div" class="input-div">
                 <label for="age" class="input-label">Age</label>
                 <input type="number" name="age" id="age" class="input" placeholder="Enter you age">
+                <span class="validity" id="age-validity">Valid</span>
             </div>
 
             <!-- Div for password -->
@@ -58,7 +61,7 @@
                 <label for="password" class="input-label">Password</label>
                 <input type="password" name="password" id="password" class="input" placeholder="Enter your password">
                 <img src="images/eye-slash-solid.svg" alt="" class="fa-solid fa-eye-slash" id="icon-btn">
-                
+                <span class="validity" id="password-strength">Invalid</span>
             </div>
 
             <!-- Submit button -->
