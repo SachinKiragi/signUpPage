@@ -176,3 +176,53 @@ form{
     background-color: white;
     letter-spacing: 0.05rem;
 }
+
+
+
+#error-msg{
+    /* border: 2px solid rgb(73, 65, 65); */
+    color: red;
+    font-family: Merriweather;
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    margin-left: 0.2rem;
+    animation: vibrate 300ms ease-out;
+    font-weight: 450;
+    
+}
+
+@keyframes vibrate {
+    0%{
+        margin: 0;
+    }
+    10%{
+        margin-right: 0.4rem;
+    }
+    20%{
+        margin: 0;
+    }
+    30%{
+        margin-left: 0.4rem;
+    }
+    40%{
+        margin: 0;
+    }
+    50%{
+        margin-right: 0.4rem;
+    }
+    60%{
+        margin: 0;
+    }
+    70%{
+        margin-left: 0.4rem;
+    }
+    80%{
+        margin: 0;
+    }
+    90%{
+        margin-right: 0.4rem;
+    }
+    100%{
+        margin: 0;
+    }
+}
