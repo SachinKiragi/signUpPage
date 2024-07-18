@@ -1,11 +1,82 @@
-let users = [];
+const formEl = document.querySelector("#login-form")
+const usernameEl = document.querySelector('#username');
+const phoneEl = document.querySelector('#phone');
+const emailEl = document.querySelector('#email');
+const genderEl = document.querySelectorAll('.gender');
+const ageEl = document.querySelector('#age');
+const passwordEl = document.querySelector('#password');
+const submitBtnEl =  document.querySelector('#submit-btn');
 
-
+// Temprory object to store instance of an user
 let user = {
-    name: "ramesh",
-    password: "123"
+    userName: null,
+    phone: null,
+    email: null,
+    gender: null,
+    age: null,
+    password: null
 }
 
-users.push(user);
+console.log(usernameEl, phoneEl, emailEl, genderEl, ageEl, passwordEl, submitBtnEl);
 
-console.log(users);
+function getGender(){
+    let gender = null;
+    genderEl.forEach((el) => {
+        if(el.checked){
+            if(el.id=="male-radio"){
+                gender = "male";
+            } else if(el.id == "female-radio"){
+                gender = "female";
+            } else if(el.id == "other-radio"){
+                gender = "other";
+            } 
+        }
+    });
+    return gender;
+}
+
+
+//Function to check whether all details ae valid
+function isFormValid(){
+    if(user.userName=="" || user.phone=="" || user.email=="" || user.gender==null || user.age=="" || user.password==""){
+        return 0;
+    } else{
+        return 1;
+    }
+}
+
+
+//Function to get user data
+function getUserData(){
+    // console.log(usernameEl.value);
+    user.userName = usernameEl.value;
+    // console.log(phoneEl.value);
+    user.phone = phoneEl.value;
+    // console.log(emailEl.value);
+    user.email = emailEl.value;
+    // console.log("gender: " , getGender());
+    user.gender = getGender();
+    // console.log(ageEl.value);
+    user.age = ageEl.value;
+    // console.log(passwordEl.value);
+    user.password = passwordEl.value;
+
+
+    if(isFormValid()){
+        console.log(user);
+        formEl.reset();
+        localStorage.setItem(user.userName, JSON.stringify(user))
+       temp = localStorage.getItem(user.userName);
+       temp =JSON.parse(temp);
+       console.log("temp: ", temp);
+    } else{
+        alert("plz enter all details");
+    }
+    
+}
+
+// Event listner on submit button
+submitBtnEl.addEventListener('click', (e) => {
+    e.preventDefault();
+    getUserData();
+});
