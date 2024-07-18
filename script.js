@@ -6,6 +6,7 @@ const genderEl = document.querySelectorAll('.gender');
 const ageEl = document.querySelector('#age');
 const passwordEl = document.querySelector('#password');
 const submitBtnEl =  document.querySelector('#submit-btn');
+const iconBtnEl = document.querySelector('#icon-btn');
 
 // Temprory object to store instance of an user
 let user = {
@@ -80,3 +81,21 @@ submitBtnEl.addEventListener('click', (e) => {
     e.preventDefault();
     getUserData();
 });
+
+
+iconBtnEl.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if(e.target.src == "http://127.0.0.1:5500/loginPage/images/eye-slash-solid.svg"){
+
+        e.target.src = "images/eye-solid.svg";
+        passwordEl.type = "text";
+
+    } else{
+
+        e.target.src = "images/eye-slash-solid.svg";
+        passwordEl.type = "password";
+        
+    }
+});
+
+

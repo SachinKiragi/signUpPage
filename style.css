@@ -152,3 +152,12 @@ form{
 #submit-btn, #gender-div .gender-radio-div label, #gender-div .gender-radio-div .gender{
     cursor: pointer;
 }
+
+/* Styling eye icon */
+.fa-eye-slash{
+    position: absolute;
+    right: 0;
+    margin-right: 0.5rem;
+    height: 1rem;
+    cursor: pointer;
+}
