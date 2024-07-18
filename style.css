@@ -1,9 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/* Merriweather */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* - `.container`
+- `#title`
+- `#login-form`
+- `#username-div`
+- `.input-label`
+- `.input`
+- `#email-div`
+- `#gender-div`
+- `.gender`
+- `#age-div`
+- `#password-div`
+- `#submit-btn` */
+
+/* Styling class container */
 .container{
     border: 2px solid black;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Styling form */
+form{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    width: fit-content;
+    /* padding: 2rem; */
+}
+
+
+/* Styling each input-div */
+.input-div{
+    /* border: 2px solid green; */
+    height: 2rem;
+    width: 23rem;
+    display: flex;
+    align-items: center;
+    /* padding: 0.3rem; */
+    position: relative;
+}
+
+/* styling each input divs label field */
+.input-div .input-label{
+    /* border: 2px solid yellow; */
+    font-family: Merriweather;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(255, 2, 2);
+    position: absolute;
+    margin-top: -2.5rem;
+    margin-left: 0.75rem;
+    z-index: 1;
+    background-color: white;
+    letter-spacing: 0.04rem;
+}
+
+
+/* styling each input divs input field */
+.input-div .input{
+    height: 2rem;
+    width: 25rem;
+    z-index: 0;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    height: 2.5rem;
+}
+
+.input-div .input::placeholder{
+    /* font-family: Merriweather; */
+    color: rgba(94, 91, 91, 0.497);
+}
+
+/* Styling gender div */
+#gender-div{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.3rem;
+    height: 2.5rem;
+}
+
+/* Styling gender radio div (male-female-other) */
+#gender-div .gender-radio-div{
+    /* border: 2px solid lawngreen; */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0.7rem;
+    
+}
+/* styling each gender radio in gender-radio-div */
+#gender-div .gender-radio-div .gender{
+ 
+    margin-right: 0.5rem;
+}
+
+/* styling each gender label in gender-radio-div */
+#gender-div .gender-radio-div label{
+    font-size: 0.8rem;
+    letter-spacing: 0.06rem;
+}
+
+/* Styling title(Login Page) */
+#title{
+    /* border: 2px solid navy; */
+    width: fit-content;
+    margin-top: -2.6rem;
+    background-color: white;
+    margin-bottom: 3rem;
+    font-family: Merriweather;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+/* Styling submit button */
+#submit-btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1.2rem;
+    margin: auto;
+    font-family: Merriweather;
+    font-weight: 600;
+    background-color: blue;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+#submit-btn, #gender-div .gender-radio-div label, #gender-div .gender-radio-div .gender{
+    cursor: pointer;
 }
